@@ -11,8 +11,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="LandingPage" component={Landing} />
+        <Stack.Screen name="LandingPage" component={Landing} options={{ headerShown: false }} />
         <Stack.Screen name="Homepage" component={Home} />
+        {/* <Stack.Screen name="Searchpage" component={Home} />
+        <Stack.Screen name="Add" component={Home} />
+        <Stack.Screen name="Profilepage" component={Home} />
+        <Stack.Screen name="Chatpage" component={Home} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   )

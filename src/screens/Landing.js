@@ -1,22 +1,34 @@
 import React from 'react'
-import {StyleSheet, View, Text, Button} from 'react-native'
+import {StyleSheet, View, Text, Button, Image} from 'react-native'
 
-export default function Landing() {
+export default function Landing(props) {
+
     return (
         <View style={styles.container}>
-            <Text style={styles.heading}>Landing Page</Text>
+            <View style={styles.logo}>
+                <Image source={require('../assets/logo.png')} />
+            </View>
+            <View style={styles.loginBtn}>
+                <Button 
+                    title='Login with Facebook'
+                    onPress={()=> props.navigation.navigate('Homepage')} />
+            </View>
         </View>
     )
 }
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#ffffff'
+    },
+    logo: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#dbdbdb'
+        marginTop: '60%'
     },
-    heading: {
-        color: 'red',
-        backgroundColor: '#ffffff',
+    loginBtn: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 40,
     }
 })
