@@ -5,8 +5,10 @@ export default function Landing(props) {
 
     return (
         <View style={styles.container}>
-            <View style={styles.logo}>
-                <Image source={require('../assets/logo.png')} />
+            <View style={styles.logoView}>
+                <Image 
+                    source={require('../assets/logo.png')}
+                    style={styles.logoImage} />
             </View>
             <View style={styles.loginBtn}>
                 <Button 
@@ -21,10 +23,15 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#ffffff'
     },
-    logo: {
+    logoView: {
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '60%'
+        marginTop: '40%',
+    },
+    logoImage:{
+        width: 170,
+        height: 100,
+        resizeMode: 'contain',
     },
     loginBtn: {
         justifyContent: 'center',

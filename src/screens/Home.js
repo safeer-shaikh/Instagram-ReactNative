@@ -1,22 +1,17 @@
 import React from 'react'
-import {StyleSheet, View, Text, Button} from 'react-native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import FeedPage from './Feed';
+import AddPage from './Add';
+import ProfilePage from './Profile';
+
+const Tab = createBottomTabNavigator();
 
 export default function Home() {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.heading}>Home Page</Text>
-        </View>
+    return(
+        <Tab.Navigator>
+            <Tab.Screen name="Feed" component={FeedPage} />
+            <Tab.Screen name="Add" component={AddPage} />
+            <Tab.Screen name="Profile" component={ProfilePage} />
+        </Tab.Navigator>
     )
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#dbdbdb',
-    },
-    heading: {
-        color: 'red',
-        backgroundColor: '#ffffff',
-    },
-})
