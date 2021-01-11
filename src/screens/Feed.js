@@ -1,8 +1,9 @@
 import React from 'react'
 import { useEffect,  } from 'react'
-import { StyleSheet, View, Text, Image } from 'react-native'
+import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import Post from '../components/Post'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default function Feed(props) {
 
@@ -16,9 +17,14 @@ export default function Feed(props) {
 
     return (
         <View style={styles.container}>
-            <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between',}}>
+            <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',}}>
                 <Image source={require('../assets/logo.png')} style={styles.logoImage} />
-                <View><Text>Messenger Icon</Text></View>
+                <TouchableOpacity 
+                    onPress={()=>console.log('will move to chat')} >
+                    <MaterialCommunityIcons
+                        name='facebook-messenger' 
+                        style={{fontSize: 25, color: 'gray',}} />
+                </TouchableOpacity>
             </View>
             <ScrollView>
                 <Post />

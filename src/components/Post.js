@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Button, Image } from 'react-native'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default function Post() {
     return (
@@ -12,11 +13,9 @@ export default function Post() {
                     <Text>UserName</Text>
                 </View>
                 <View>
-                    <Text>3 dots icon</Text>
+                    <MaterialCommunityIcons name='dots-vertical' style={{fontSize: 18}} />
                 </View>
-            </View>
-
-            <View>
+            </View><View>
                 <Image source={require('../assets/logo.png')} alt='post' style={{resizeMode: 'contain'}} />
             </View>
         </View>
