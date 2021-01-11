@@ -17,10 +17,11 @@ export default function Feed(props) {
 
     return (
         <View style={styles.container}>
-            <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',}}>
+            <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', borderBottomColor: '#dbdbdb',}}>
                 <Image source={require('../assets/logo.png')} style={styles.logoImage} />
                 <TouchableOpacity 
-                    onPress={()=>console.log('will move to chat')} >
+                    style={{marginRight: 20}}
+                    onPress={()=> props.navigation.navigate('Chatpage')} >
                     <MaterialCommunityIcons
                         name='facebook-messenger' 
                         style={{fontSize: 25, color: 'gray',}} />

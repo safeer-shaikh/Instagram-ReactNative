@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Landing from './src/screens/Landing'
 import Home from './src/screens/Home'
+import Chat from './src/screens/Chat'
 // import * as firebase from 'firebase'
 
 // var firebaseConfig = {
@@ -26,6 +27,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="LandingPage" component={Landing} options={{ headerShown: false }} />
         <Stack.Screen name="Homepage" component={Home} options={{ headerShown: false }} />
+        <Stack.Screen name="Chatpage" component={Chat} options={{ headerShown: true }} />
         {/* <Stack.Screen name="Searchpage" component={Home} />
         <Stack.Screen name="Add" component={Home} />
         <Stack.Screen name="Profilepage" component={Home} />

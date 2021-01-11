@@ -15,25 +15,29 @@ export default function Home() {
             options={{
                 tabBarIcon: () => (
                     <MaterialCommunityIcons name='home' style={{fontSize: 28}} />
-                )
+                ),
+                tabBarLabel: () => { return null},
             }} />
             <Tab.Screen name="Search" component={SearchPage} 
             options={{
                 tabBarIcon: () => (
                     <MaterialCommunityIcons name='magnify' style={{fontSize: 28}} />
-                ) 
+                ) ,
+                tabBarLabel: () => { return null},
             }} />
             <Tab.Screen name="Add" component={AddPage} 
             options={{
                 tabBarIcon: () => (
                     <MaterialCommunityIcons name='plus-box' style={{fontSize: 28}} />
-                ) 
+                ),
+                tabBarLabel: () => { return null}, 
             }} />
             <Tab.Screen name="Profile" component={ProfilePage}
             options={{
                 tabBarIcon: () => (
                     <MaterialCommunityIcons name='account-circle' style={{fontSize: 28}} />
-                ) 
+                ),
+                tabBarLabel: () => { return null}, 
             }} />
         </Tab.Navigator>
     )
